@@ -14,9 +14,21 @@ date: 2019-09-01
 
 ## Broncode.
 
-```console
-$ ls -la
-No such file or directory
+```bash
+# Usage: copy_iso_to_usb ISO DEVICE
+copy_iso_to_usb() {
+  local iso="${1}"
+  local iso_size
+  local destination="${2}"
+
+  iso_size=$(stat -c '%s' "${iso}")
+
+  debug "Copying ${iso} (${iso_size}B) to ${destination}"
+
+  dd if="${iso}" \
+    | pv --size "${iso_size}" \
+    | sudo dd of="${destination}"
+}
 ```
 
 ## Citaat.
