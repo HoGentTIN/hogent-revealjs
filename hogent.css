@@ -146,7 +146,7 @@ body {
   font-family: 'Inconsolata', monospace;
   line-height: 1.2em;
   word-wrap: break-word;
-  box-shadow: 0px 0px 6px rgb(195,187,175); /* HOGENT grey */ }
+  box-shadow: 0px 0px 6px rgba(195,187,175,.4); /* HOGENT grey */ }
 
 .reveal code {
   color: rgb(76, 162, 213); /* HOGENT blue */
@@ -158,7 +158,7 @@ body {
   overflow: auto;
   max-height: 550 px;
   word-wrap: normal;
-  background: rgb(195,187,175); /* HOGENT grey */
+  background: rgba(195,187,175,.4); /* HOGENT grey */
   color: #000000;
   }
 
