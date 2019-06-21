@@ -61,8 +61,10 @@ $(OUTPUT)/index.html: $(SOURCE_FILE) $(OUTPUT)/assets $(REVEAL_JS_DIR) $(STYLE_F
 		--to=revealjs \
 		--template=default.revealjs \
 		--variable=theme:hogent \
-		--highlight-style=haddock \
+		--highlight-style=kate \
 		--output $@ $<
+
+# highlight-styles: pygments, tango, espresso, zenburn, kate, monochrome, breezedark, haddock
 
 ## Generate PDF handouts
 $(OUTPUT)/handouts.pdf: $(SOURCE_FILE) $(OUTPUT)/assets 
