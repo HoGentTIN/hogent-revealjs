@@ -27,3 +27,5 @@ Als je de presentatie bijhoudt op Github, kan je Github Pages activeren om het r
 2. Ga naar de Github repository met de broncode van je presentatie, klik door naar Settings
 3. Scoll naar beneden tot je de titel "Github Pages" tegenkomt
 4. In het dropdown-menu, kies "master branch /docs" folder
+
+De presentatie is dan zichtbaar via url `https://GEBRUIKER.github.io/REPOSITORY/`. Voor deze repo, bijvoorbeeld: <https://hogenttin.github.io/hogent-revealjs/>
