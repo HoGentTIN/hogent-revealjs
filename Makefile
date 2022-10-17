@@ -22,14 +22,16 @@ OUTPUT := docs
 REVEAL_JS_DIR := $(OUTPUT)/reveal.js
 
 # File name of the reveal.js tarball
-REVEAL_JS_TAR := 3.8.0.tar.gz
+# Remark: Pandoc 2.9.2.2 and later can use reveal.js 4.x:
+# See Pandoc Wiki <https://github.com/jgm/pandoc/wiki/Using-pandoc-to-produce-reveal.js-slides>
+REVEAL_JS_TAR := 4.3.1.tar.gz
 
 # Download URL
 REVEAL_JS_URL := https://github.com/hakimel/reveal.js/archive/$(REVEAL_JS_TAR)
 
 # reveal.js style file
 STYLE := hogent
-STYLE_FILE := $(REVEAL_JS_DIR)/css/theme/$(STYLE).css
+STYLE_FILE := $(REVEAL_JS_DIR)/dist/theme/$(STYLE).css
 
 ##---------- User build targets -----------------------------------------------
 
@@ -61,6 +63,7 @@ $(OUTPUT)/index.html: $(SOURCE_FILE) $(OUTPUT)/assets $(REVEAL_JS_DIR) $(STYLE_F
 		--to=revealjs \
 		--template=default.revealjs \
 		--variable=theme:hogent \
+		--variable=revealjs-url:reveal.js \
 		--highlight-style=kate \
 		--output $@ $<
 
@@ -88,4 +91,4 @@ $(REVEAL_JS_DIR):
 	mv -T reveal.js* $(REVEAL_JS_DIR)
 
 $(OUTPUT)/assets:
-	cp -r assets/ $(OUTPUT)
+	cp -r assets/ $(OUTPUT)/assets

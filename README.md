@@ -1,6 +1,6 @@
 # Presentatiesjabloon HOGENT
 
-In deze repo vind je een stijlsjabloon voor een sobere presentatie, conform de HOGENT huisstijl, gebaseerd op [reveal.js](https://revealjs.com/).
+In deze repo vind je een stijlsjabloon voor een sobere presentatie, conform de HOGENT huisstijl, gebaseerd op [reveal.js (v4.3.1)](https://revealjs.com/).
 
 In `index.md` komt de inhoud van de presentatie, [opgemaakt in Markdown](https://github.com/jgm/pandoc/wiki/Using-pandoc-to-produce-reveal.js-slides). Een `Makefile` zorgt voor de omzetting in een reveal.js-presentatie. De presentatie kan dan getoond worden in een webbrowser en/of online gepubliceerd worden via Github Pages.
 
